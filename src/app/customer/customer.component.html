@@ -1,0 +1,31 @@
+<p>customer works!</p>
+<p>customer works!</p><p>customer works!</p><p>customer works!</p><p>customer works!</p>
+chao ban {{ name}}
+chao ban {{ age}}
+<span *ngIf="age>18">alo</span>
+<div *ngFor="let a of vehicles">
+  <li>{{ a}}</li>
+</div>
+
+<select (change)="Selectverhicle()">
+<option *ngFor="let a of vehicles">
+  {{a}}
+</option>
+<br>
+
+</select>
+<input [(ngModel)]="name">
+<h3 (click)="tangname()" class="overAge">ban da la {{age}} tuoi</h3>
+<h3 onclick="alert('hi')" class="a">ban da la  tuoi</h3>
+
+
+<span *ngIf="age<19;then condition1; else condition2"></span>
+
+<ng-template #condition1 class="under age">ban duoi 19</ng-template>
+
+<ng-template #condition2 class="over age">ban treen 19</ng-template>
+
+
+<!-- pipe chuyen doi data-->
+chao ban {{ name | uppercase}}
+<!--routing thiet lap duong dan giua cac trang-->
